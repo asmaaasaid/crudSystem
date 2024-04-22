@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS SYSTEM</title>
+    <link rel="stylesheet" href="Style/bootstrap.min.css">
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+
+    <!-- form data -->
+    <section class="bg-dark ">
+    <h1 class="text-uppercase fs-2 text-center py-5 text-light">crud system</h1>
+    <section class="w-75 mx-auto py-5 bg-light rounded p-5 ">
+            <div class="mb-3">
+              <label  class="form-label text-capitalize">product name</label>
+              <input type="text" class="form-control " id="productNameInput">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label text-capitalize">product price</label>
+                <input type="number" class="form-control " id="productPriceInput">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label text-capitalize">product category</label>
+                <input type="text" class="form-control" id="productCategoryInput">
+              </div>
+             
+            <button type="submit" class="btn btn-primary text-capitalize" onclick='addProduct()' id="changeButton"> add product</button>
+         
+    </section>
+ <!-- search -->
+ <div class="w-75 mx-auto my-5 ">
+  <label class="form-label text-capitalize text-light">search</label>
+  <input type="text" class="form-control" oninput="searchProduct(this.value)">
+ </div>
+    <!-- table data -->
+    <table class="table w-75 mx-auto text-center text-light">
+        <thead>
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">name</th>
+            <th class="text-capitalize">price</th>
+            <th class="text-capitalize">category</th>
+            <th class="text-capitalize"> update</th>
+            <th class="text-capitalize"> delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+         
+         
+        </tbody>
+      </table>
+    </section>
+    <script src="Script/bootstrap.bundle.min.js"></script>
+    <script src="Script/script.js"></script>
+</body>
+</html>
